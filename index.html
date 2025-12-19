@@ -4,107 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой блог</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        .date {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #7f8c8d;
-        }
-    </style>
+  
 </head>
 <body>
     <h1>Мой блог</h1>
-    <div class="date" id="current-date"></div>
-
-    <script>
-        // Получаем текущую дату
-        const now = new Date();
-        const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
-        const formattedDate = now.toLocaleDateString('ru-RU', options);
-        document.getElementById('current-date').textContent = formattedDate;
-    </script>
+   
 </body>
 </html>
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Поздравление с Рождеством 2026</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f0f8ff;
-    }
-    h1 {
-      color: #d32f2f;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #4caf50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    a:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-  <h1>Поздравляю с наступающим Рождеством 2026!</h1>
-  
-  <p>Пусть этот праздник принесёт вам радость, тепло и уют!</p>
-  
-  <a href="pоздравление_рождество_2026.txt" download>Скачать поздравление (TXT)</a>
-
-  <!-- Создание текстового файла с помощью JavaScript (опционально) -->
-  <script>
-    // Если файл не будет загружен на сервер, можно создать его "на лету"
-    function downloadTextFile() {
-      const text = "Поздравляю с наступающим Рождеством 2026!";
-      const blob = new Blob([text], { type: 'text/plain;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = "поздравление_рождество_2026.txt";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-
-    // Подключаем функцию к ссылке (если файл не загружен)
-    document.querySelector('a').addEventListener('click', function(e) {
-      e.preventDefault();
-      downloadTextFile();
-    });
-  </script>
-</body>
-</html>
-
-<!DOCTYPE htnl>
-<html>
-    <head>
-        <title>Моя презентация</title>
-    </head>
-<body>
-    <a href="krossvordRU.html">Русский кроссворд</a>
-
-</body>
-</html>
