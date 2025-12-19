@@ -7,62 +7,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .header {
-            text-align: center;
-            font-size: 3rem;
-            color: #333;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-    </style>
-</head>
-<body>
-    <h1 class="header">Мой блог</h1>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сегодняшняя дата</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
         }
         .date {
-            font-size: 24px;
-            color: #333;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #7f8c8d;
         }
     </style>
 </head>
 <body>
-    <h1>Сегодняшняя дата:</h1>
+    <h1>Мой блог</h1>
     <div class="date" id="current-date"></div>
 
     <script>
-        // Устанавливаем фиксированную дату: 19 декабря 2025 года
-        const today = new Date(2025, 11, 19); // Месяцы в JavaScript идут с 0, поэтому декабрь = 11
-
-        // Форматируем дату на русском языке
-        const options = { 
-            weekday: 'long', 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
-        };
-        const formattedDate = today.toLocaleDateString('ru-RU', options);
-
-        // Выводим дату на страницу
+        // Получаем текущую дату
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+        const formattedDate = now.toLocaleDateString('ru-RU', options);
         document.getElementById('current-date').textContent = formattedDate;
     </script>
 </body>
