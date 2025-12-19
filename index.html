@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сегодняшняя дата</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .date {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Сегодняшняя дата:</h1>
+    <div class="date" id="current-date"></div>
+
+    <script>
+        // Устанавливаем фиксированную дату: 19 декабря 2025 года
+        const today = new Date(2025, 11, 19); // Месяцы в JavaScript идут с 0, поэтому декабрь = 11
+
+        // Форматируем дату на русском языке
+        const options = { 
+            weekday: 'long', 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        };
+        const formattedDate = today.toLocaleDateString('ru-RU', options);
+
+        // Выводим дату на страницу
+        document.getElementById('current-date').textContent = formattedDate;
+    </script>
+</body>
+</html>
+
 <!DOCTYPE htnl>
 <html>
     <head>
